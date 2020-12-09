@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 
 function myMethodDecorator(target: object, name: string, descriptor: TypedPropertyDescriptor<any>){
   console.log('Yeah! My special function is running.');
-  return descriptor;
 }
 
 function myClassDecorator(constructor: Function){
