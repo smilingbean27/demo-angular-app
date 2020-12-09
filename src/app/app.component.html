@@ -2,4 +2,20 @@
 <div>
     <app-decorator></app-decorator>
     <app-data-binding ></app-data-binding>
+    <br>
+    <label> You are a parent, gift your child some toffees on his birthdays'. How many would you? <input #sendNum> </label>
+    <button (click)="send(sendNum.value)"> Send to Child </button>
+
+    <!-- $event keyword is special since it contains the data received when 'newNumEvent' got fired. -->
+    <app-component-interaction [received] = "numberToSend" (newNumEvent)="receive($event)"></app-component-interaction>
+    <p> <strong>Mom:</strong> Thank you, boy for giving my cake: <strong>{{receivedNumber}}</strong> rating</p>
 </div>
+
+
+<pre>
+Process of events firing when user clicks the button (Child to Parent data transfer) -->
+    1. Click event fires, and sendMyNumber method is called.
+    2. Inside sendMyNumber method, newNumEvent emits the value to be sent by firing the event.
+    3. As soon as newNumEvent fires, it calls receiveNum with $event as parameter ($event keyword captures the emitting value)
+    4. And receiveNum method updates the value receivedNumber
+</pre>
