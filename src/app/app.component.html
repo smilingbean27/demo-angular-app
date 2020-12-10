@@ -23,4 +23,12 @@ Process of events firing when user clicks the button (Child to Parent data trans
 
 <div>
     <app-pipes></app-pipes>
+    <app-two-way-binding [(fontSize)] = "fontSizePx"></app-two-way-binding>
+    <p [style.font-size.px]="fontSizePx">  This font resizes too</p>
 </div>
+
+<pre>
+    For Two way data binding (banana or shorthand syntax ):
+        1. Make sure you keep property names in Input, Output decorators as - property1 and property1Change, size and sizeChange, etc.
+        2. 
+</pre>
