@@ -7,11 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ComponentInteractionComponent  {
 
-   @Input() received: number = 0;
+   @Input() received: string = '';
 
-   @Output() newNumEvent = new EventEmitter<number>();
+   @Output() newNumEvent = new EventEmitter<string>();
 
-   send(value: number){
+   send(value: string){
      this.newNumEvent.emit(value);
     
    }

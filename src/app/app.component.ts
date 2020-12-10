@@ -9,15 +9,14 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'my-first-app';
   name = 'Visitor';
-  numberToSend = 0;
-  receivedNumber = 0;
+  numberToSend = '';
+  receivedNumber = '';
 
-  send(num: number){
-    this.numberToSend = num;
+  send(val: string){
+    this.numberToSend = val;
   }
 
-  receive(num: number){
-     console.log(num);
-     this.receivedNumber = num;
+  receive(val: string){
+     this.receivedNumber = val;
   }
 }

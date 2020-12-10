@@ -1,0 +1,8 @@
+<h2> Pipe Component</h2>
+
+<!-- date is inbuilt Piple that accepts 'shortDate' or 'fullDate' values -->
+<p> Today's Date: <strong>{{d | date: (toggle ? 'shortDate': 'fullDate')}}</strong></p>
+<button (click)="changeFormat()">Change Format</button>
+
+<!-- multiplier is our own custom Pipe  -->
+{{myGetFunc | multiplier: 6}}

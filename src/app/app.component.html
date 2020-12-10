@@ -11,7 +11,6 @@
     <p> <strong>Mom:</strong> Thank you, boy for giving my cake: <strong>{{receivedNumber}}</strong> rating</p>
 </div>
 
-
 <pre>
 Process of events firing when user clicks the button (Child to Parent data transfer) -->
     1. Click event fires, and sendMyNumber method is called.
@@ -19,3 +18,9 @@ Process of events firing when user clicks the button (Child to Parent data trans
     3. As soon as newNumEvent fires, it calls receiveNum with $event as parameter ($event keyword captures the emitting value)
     4. And receiveNum method updates the value receivedNumber
 </pre>
+
+<hr>
+
+<div>
+    <app-pipes></app-pipes>
+</div>
