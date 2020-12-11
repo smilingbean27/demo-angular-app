@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent {
     
+    value = 0;
+    boost = 5;
     d = new Date();
     toggle = true;
 

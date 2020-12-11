@@ -5,5 +5,11 @@
 <button (click)="changeFormat()">Change Format</button>
 
 <!-- multiplier is our own custom Pipe  -->
-{{myGetFunc | multiplier: 6}}
+<br>
+<br>
+<label>Value: <input [(ngModel)]="value" type="number" ></label>
+<label>Boost Factor: <input [(ngModel)]= "boost" type="number"></label>
+
+
+<p> Your value after being boosted by {{boost}} is: <strong>{{value | multiplier: boost }}</strong>  </p>
 
