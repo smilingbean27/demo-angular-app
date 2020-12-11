@@ -1,0 +1,29 @@
+.navigation{
+    width: 80%;
+    margin: 1rem auto;
+    &_list{
+        padding: 3rem 1rem;
+        display: flex;
+        justify-content: right;
+        background-color: brown;
+    }
+    &_item{
+        list-style: none;
+       
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    &_link{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+
+        &:hover{
+            color: #aaa;
+        }
+        
+    }
+}
