@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td><strong> SR. No. </strong>  </td>
+        <td> <strong> Name </strong> </td>
+        <td> <strong> Online Status </strong></td>
+    
+    </tr>
+    
+    <tr *ngFor="let user of users; let i = index; let evenUser = odd; let oddUser = even" [ngClass]="{even: evenUser, odd: oddUser}">
+        <td> {{i+1}} </td>
+        <td> {{user.name}} </td>
+        <td *ngIf = "user.online">
+            <div  class="online" ></div>
+        </td>
+        <td *ngIf = "!user.online"> 
+            <div  class="offline"></div>
+        </td>
+
+    </tr>
+    
+</table>

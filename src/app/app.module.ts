@@ -8,6 +8,8 @@ import { ComponentInteractionComponent } from './component-interaction/component
 import { PipesComponent } from './pipes/pipes.component';
 import { MultiplierPipe } from './multiplier.pipe';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { AngularLoopingComponent } from './angular-looping/angular-looping.component';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,13 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     ComponentInteractionComponent,
     PipesComponent,
     MultiplierPipe,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    AngularLoopingComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
