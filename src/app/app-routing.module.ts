@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
-    {path: 'component-interaction', component:ComponentInteractionComponent},
     {path: 'angular-looping', component: AngularLoopingComponent},
     {path: 'data-binding', component: DataBindingComponent},
     {path: 'decorator', component:DecoratorComponent},
