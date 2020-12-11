@@ -1,0 +1,6 @@
+<label> You are a parent, gift your child some toffees on his birthdays'. How many would you? <input #sendNum> </label>
+<button (click)="send(sendNum.value)"> Send to Child </button>
+<br>
+<!-- $event keyword is special since it contains the data received when 'newNumEvent' got fired. -->
+<app-component-interaction [received] = "numberToSend" (newNumEvent)="receive($event)"></app-component-interaction>
+<p> <strong>Mom:</strong> Thank you, boy for giving my cake: <strong>{{receivedNumber}}</strong> rating</p>

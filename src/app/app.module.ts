@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule} from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DecoratorComponent } from './decorator/decorator.component';
@@ -10,6 +11,8 @@ import { MultiplierPipe } from './multiplier.pipe';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { AngularLoopingComponent } from './angular-looping/angular-looping.component';
 import { UserService } from './user.service';
+import { ParentComponent } from './parent/parent.component';
+
 
 @NgModule({
   declarations: [
@@ -20,10 +23,12 @@ import { UserService } from './user.service';
     PipesComponent,
     MultiplierPipe,
     TwoWayBindingComponent,
-    AngularLoopingComponent
+    AngularLoopingComponent,
+    ParentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

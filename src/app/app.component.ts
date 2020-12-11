@@ -8,16 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
-  fontSizePx = 16;
-  name = 'Visitor';
-  numberToSend = '';
-  receivedNumber = '';
-
-  send(val: string){
-    this.numberToSend = val;
-  }
-
-  receive(val: string){
-     this.receivedNumber = val;
-  }
+  
 }

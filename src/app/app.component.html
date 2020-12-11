@@ -1,41 +1,30 @@
 
-<div>
-    <app-decorator></app-decorator>
-    <app-data-binding ></app-data-binding>
-    <br>
-    <label> You are a parent, gift your child some toffees on his birthdays'. How many would you? <input #sendNum> </label>
-    <button (click)="send(sendNum.value)"> Send to Child </button>
-
-    <!-- $event keyword is special since it contains the data received when 'newNumEvent' got fired. -->
-    <app-component-interaction [received] = "numberToSend" (newNumEvent)="receive($event)"></app-component-interaction>
-    <p> <strong>Mom:</strong> Thank you, boy for giving my cake: <strong>{{receivedNumber}}</strong> rating</p>
-</div>
-
-<pre>
-Process of events firing when user clicks the button (Child to Parent data transfer) -->
-    1. Click event fires, and sendMyNumber method is called.
-    2. Inside sendMyNumber method, newNumEvent emits the value to be sent by firing the event.
-    3. As soon as newNumEvent fires, it calls receiveNum with $event as parameter ($event keyword captures the emitting value)
-    4. And receiveNum method updates the value receivedNumber
-</pre>
+<ul>
+    <li><a routerLink="/angular-looping" routerLinkActive="active">Angular Looping Component </a></li>
+    <!-- <li><a routerLink="/component-interaction" routerLinkActive="active">Component Interaction Component </a></li> -->
+    <li><a routerLink="/data-binding" routerLinkActive="active"> Data binding Component </a></li>
+    <li><a routerLink="/decorator" routerLinkActive="active"> Decorator Component </a></li>
+    <li><a routerLink="/parent" routerLinkActive="active">Parent Component </a></li>
+    <li><a routerLink="/pipes" routerLinkActive="active">Pipes Component </a></li>
+    <li><a routerLink="/two-way-binding" routerLinkActive="active">Two Way binding Component </a></li>
+    
+</ul>
 
 <hr>
 
-<div>
-    <app-pipes></app-pipes>
-    <app-two-way-binding [(fontSize)] = "fontSizePx"></app-two-way-binding>
-    <p [style.font-size.px]="fontSizePx">  This font resizes too</p>
-</div>
+<router-outlet></router-outlet>
 
+<hr>
+<pre>
+    Process of events firing when user clicks the button (Child to Parent data transfer) -->
+        1. Click event fires, and sendMyNumber method is called.
+        2. Inside sendMyNumber method, newNumEvent emits the value to be sent by firing the event.
+        3. As soon as newNumEvent fires, it calls receiveNum with $event as parameter ($event keyword captures the emitting value)
+        4. And receiveNum method updates the value receivedNumber
+</pre>
+<hr>
 <pre>
     For Two way data binding (banana or shorthand syntax ):
         1. Make sure you keep property names in Input, Output decorators as - property1 and property1Change, size and sizeChange, etc.
         2. 
 </pre>
-
-<hr>
-
-<div>
-    <h1> SERVICES</h1>
-    <app-angular-looping></app-angular-looping>
-</div>
