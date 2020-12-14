@@ -1,0 +1,35 @@
+<h3> Form Builder </h3>
+
+<hr>
+
+<form [formGroup]="formGroup">
+    <label>
+        Element you want to add? <input type="text" formControlName="formElement" >
+    </label>
+    <button (click)="addToFormArray()">Add element</button>
+
+    <div formArrayName="formArray">
+        <div *ngFor="let formArrayItem of formArray.controls; let i = index">
+            <label>
+                {{formElement.value}}<input type="text" formControlName="i">
+            </label>
+            
+        </div>
+    </div>
+
+    
+    
+</form>
+
+    
+
+
+
+
+
+
+
+
+
+
+

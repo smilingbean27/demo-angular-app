@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule} from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DecoratorComponent } from './decorator/decorator.component';
@@ -13,6 +13,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { AngularLoopingComponent } from './angular-looping/angular-looping.component';
 import { UserService } from './user.service';
 import { ParentComponent } from './parent/parent.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 @NgModule({
@@ -25,12 +26,14 @@ import { ParentComponent } from './parent/parent.component';
     MultiplierPipe,
     TwoWayBindingComponent,
     AngularLoopingComponent,
-    ParentComponent
+    ParentComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
