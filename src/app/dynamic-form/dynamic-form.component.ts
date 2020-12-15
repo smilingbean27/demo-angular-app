@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray} from '@angular/forms';
-import { QuestionBase } from './question-base';
-import { QuestionService } from '../question.service';
+import { QuestionBase } from './extras/question-base';
+import { QuestionService } from '../services/question.service';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -26,5 +26,4 @@ export class DynamicFormComponent implements OnInit{
       formArray : new FormArray([])
     })
   }
-
 }

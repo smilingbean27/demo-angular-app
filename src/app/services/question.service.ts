@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { QuestionBase } from './dynamic-form/question-base';
-import { QuestionDropdown } from './dynamic-form/question-dropdown';
-import { QuestionTextBox } from './dynamic-form/question-textbox';
+import { QuestionBase } from '../dynamic-form/extras/question-base';
+import { DropdownQuestion } from '../dynamic-form/extras/dropdown-question';
+import { TextBoxQuestion } from '../dynamic-form/extras/textbox-question';
 
 import { of } from 'rxjs';
 
@@ -14,7 +14,7 @@ export class QuestionService {
     
     const questions: Array<QuestionBase<string>> = [
 
-      new QuestionDropdown({
+      new DropdownQuestion({
         key: 'colors',
         label: 'Colors',
         order: 3, 
@@ -26,14 +26,14 @@ export class QuestionService {
 
       }),
 
-      new QuestionTextBox({
+      new TextBoxQuestion({
         key: 'userName',
         value: 'Bill Gates',
         label: 'Username',
         order: 1
       }),
 
-      new QuestionTextBox({
+      new TextBoxQuestion({
         key: 'emailaddress',
         value: 'something@gmail.com',
         label: 'Email Address',
