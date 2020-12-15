@@ -18,6 +18,10 @@ export class FormsComponent{
     return this.formGroup.get('formArray') as FormArray;
   }
 
+  get formElement(){
+    return this.formGroup.get('formElement') as FormControl;
+  }
+
   addToFormArray(){
     this.formArray.push(new FormControl(''));
     console.log(this.formArray);

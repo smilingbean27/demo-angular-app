@@ -12,8 +12,10 @@ import { MultiplierPipe } from './multiplier.pipe';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { AngularLoopingComponent } from './angular-looping/angular-looping.component';
 import { UserService } from './user.service';
+import { QuestionService } from './question.service';
 import { ParentComponent } from './parent/parent.component';
 import { FormsComponent } from './forms/forms.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { FormsComponent } from './forms/forms.component';
     TwoWayBindingComponent,
     AngularLoopingComponent,
     ParentComponent,
-    FormsComponent
+    FormsComponent,
+    DynamicFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { FormsComponent } from './forms/forms.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, QuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
