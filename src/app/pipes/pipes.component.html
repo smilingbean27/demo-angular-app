@@ -2,13 +2,13 @@
 
 <!-- date is inbuilt Piple that accepts 'shortDate' or 'fullDate' values -->
 <p> Today's Date: <strong>{{d | date: (toggle ? 'shortDate': 'fullDate')}}</strong></p>
-<button (click)="changeFormat()">Change Format</button>
+<button mat-raised-button color="primary" (click)="changeFormat()">Change Format</button>
 
 <!-- multiplier is our own custom Pipe  -->
 <br>
 <br>
-<label>Value: <input [(ngModel)]="value" type="number" ></label>
-<label>Boost Factor: <input [(ngModel)]= "boost" type="number"></label>
+<label>Value: <input matInput [(ngModel)]="value" type="number" ></label>
+<label>Boost Factor: <input matInput [(ngModel)]= "boost" type="number"></label>
 
 
 <p> Your value after being boosted by {{boost}} is: <strong>{{value | multiplier: boost }}</strong>  </p>

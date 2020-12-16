@@ -1,23 +1,18 @@
-<nav class="navigation">
-    <ul class="navigation_list">
-        <li class="navigation_item"><a class="navigation_link" routerLink="/angular-looping" routerLinkActive="active">Angular Looping </a></li>
-        <!-- <li><a routerLink="/component-interaction" routerLinkActive="active">Component Interaction Component </a></li> -->
-        <li class="navigation_item"><a class="navigation_link" routerLink="/data-binding" routerLinkActive="active"> Data binding </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/decorator" routerLinkActive="active"> Decorator </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/dynamic-form" routerLinkActive="active"> Dynamic Form </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/forms" routerLinkActive="active"> Forms </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/parent" routerLinkActive="active">Parent </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/pipes" routerLinkActive="active">Pipes </a></li>
-        <li class="navigation_item"><a class="navigation_link" routerLink="/two-way-binding" routerLinkActive="active">Two Way binding </a></li>
-        
-    </ul>
-    
-    <hr>
-    
 
-    <router-outlet></router-outlet>
+ <nav mat-tab-nav-bar>
+    <a mat-tab-link routerLink="/angular-looping" routerLinkActive="active">Angular Looping </a>
+    <a mat-tab-link routerLink="/data-binding" routerLinkActive="active">Data Binding </a>
+    <a mat-tab-link routerLink="/decorator" routerLinkActive="active">Decorator </a>
+    <a mat-tab-link routerLink="/dynamic-form" routerLinkActive="active">Dynamic Form </a>
+    <a mat-tab-link routerLink="/forms" routerLinkActive="active"> Forms </a>
+    <a mat-tab-link routerLink="/http" routerLinkActive="active"> HTTP </a>
+    <a mat-tab-link routerLink="/parent" routerLinkActive="active"> Parent</a>
+    <a mat-tab-link routerLink="/pipes" routerLinkActive="active"> Pipes</a>
+    <a mat-tab-link routerLink="/two-way-binding" routerLinkActive="active"> Two-way Binding</a>
     
-    <hr>
-
 </nav>
+
+<router-outlet></router-outlet>
+
+
 
