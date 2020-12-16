@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { FormsComponent } from './forms/forms.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { HttpComponent } from './http/http.component';
 
 const routes: Routes = [
     {path: 'angular-looping', component: AngularLoopingComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path: 'decorator', component:DecoratorComponent},
     {path: 'dynamic-form', component:DynamicFormComponent},
     {path: 'forms', component:FormsComponent},
+    {path: 'http', component:HttpComponent},
     {path: 'pipes', component: PipesComponent},
     {path: 'parent', component: ParentComponent},
     {path: 'two-way-binding', component: TwoWayBindingComponent},

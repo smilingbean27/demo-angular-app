@@ -1,8 +1,9 @@
 
 <!-- Two way data binding -->
 <div class="binding">
-    <button (click) = "increase()"> + </button>
-    <button (click) = "decrease()"> - </button>
+    <button mat-mini-fab color="primary" (click) = "increase()"> + </button>
+    <button mat-mini-fab color="primary" (click) = "decrease()"> - </button>
+    <br>
     <p  [style.font-size.px]="fontSize"> This font resizes!!!</p>
 </div>
 

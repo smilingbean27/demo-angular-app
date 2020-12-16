@@ -1,0 +1,13 @@
+
+<h2> Weather Search API</h2>
+
+<input type="text" placeholder="Search City" [formControl]="searchInput">
+
+
+<h4>
+    Temperature: {{temperature | temperature: 'C' }}
+</h4>
+
+<h4>
+    Humidity: {{humidity}}
+</h4>
